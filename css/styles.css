@@ -7,6 +7,16 @@ header {
   text-align: center;
 }
 
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.title {
+  text-shadow: 0 0 0.1em #d8b703, 0 0 0.25em #d8b703, 0 0 0.5em #d8b703
+}
+
 .title-letter {
   font-size: 1.5em;
 }
@@ -30,10 +40,11 @@ header {
 }
 
 #nameLabel {
-  margin: 100px;
   color: #3d85c6;
   font-size: 6em;
   font-weight: bold;
+  text-align: center;
+  max-width: 95%;
 }
 
 #nameLabel::first-letter {
@@ -42,22 +53,9 @@ header {
 
 
 
-.cat-selector {
-  width: 95%;
-  margin: 0 auto;
-  vertical-align: text-bottom;
-}
-
 .cat-type {
   text-align: center;
   vertical-align:  bottom;
-}
-
-.cat-selector input{
-    margin:0;padding:0;
-    -webkit-appearance:none;
-       -moz-appearance:none;
-            appearance:none;
 }
 
 
@@ -153,7 +151,7 @@ label > input + img:hover{
 }
 
 #loading-screen img {
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .rotate {
@@ -168,3 +166,26 @@ label > input + img:hover{
     transform: rotate(359deg);
   }
 }
+
+
+@media (max-width: 700px) {
+  #nameLabel {
+    font-size: 4em;
+  }
+  
+  .categoryName {
+    font-size: 1.25em;
+  }
+  
+  label > input + img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 550px) {
+  #nameLabel {
+    font-size: 3em;
+  }
+}
+

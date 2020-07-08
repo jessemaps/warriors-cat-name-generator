@@ -57,7 +57,9 @@ function displayName() {
   loader.classList.toggle('show');
   
   //set timer for a few seconds
-  setTimeout(showResults, 1500)
+  //Get random wait time
+  var timeoutDuration = getRandomIntInclusive(500, 2000);
+  setTimeout(showResults, timeoutDuration)
 }
 
 function showResults() {
