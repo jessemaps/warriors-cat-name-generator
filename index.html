@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Warriors Name Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    
+    <script src="js/warriors-name-bank.js"></script>
+    <script src="js/warriors.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160285339-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-160285339-1');
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="title">
+          <h1><span class="title-letter">W</span>arriors <span class="title-letter">C</span>at <span class="title-letter">N</span>ame <span class="title-letter">G</span>enerator</h1>
+        </div>
+      </header>
+      <article class="">
+        <div class="row selector">
+          <!--div class="cat-selector">
+            <input id="leader" type="radio" name="catType" value="leader">
+            <label for="leader" class="cat-type leader">Leader</label><br>
+            <input id="warrior" type="radio" name="catType" value="warrior">
+            <label for="warrior" class="cat-type warrior">Warrior</label>
+            <input id="apprentice" type="radio" name="catType" value="apprentice" checked>
+            <label for="apprentice" class="cat-type apprentice">Apprentice</label><br>
+            <input id="kit" type="radio" name="catType" value="kit">
+            <label for="kit" class="cat-type kit">Kit</label>
+          </div-->
+          
+          <!--https://stackoverflow.com/questions/42137293/use-image-instead-of-radio-button-with-text-below-image<br/-->
+          <label class="layersMenu">
+            <input type="radio" id="leaderRadio" name="catType" value="leader" checked />
+            <img src="images/leader_square.png">
+            <div class="categoryName">Leader</div>
+          </label>
+
+          <label class="layersMenu">
+            <input type="radio" id="warriorRadio" name="catType" value="warrior" />
+            <img src="images/warrior_square.png">
+            <div class="categoryName">Warrior</div>
+          </label>
+          
+          <label class="layersMenu">
+            <input type="radio" id="apprenticeRadio" name="catType" value="apprentice" checked />
+            <img src="images/apprentice_square.png">
+            <div class="categoryName">Apprentice</div>
+          </label>
+
+          <label class="layersMenu">
+            <input type="radio" id="kitRadio" name="catType" value="kit" />
+            <img src="images/kit_square.png">
+            <div class="categoryName">Kit</div>
+          </label>
+          
+        </div>
+
+        <div class="row">
+          <div class="content">
+            <button id="nameGenerator" type="button" onclick="displayName();">Generate Name!</button>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="content">
+            <p id="nameLabel"></p>
+          </div>
+          
+        </div>
+
+        <br/>
+        <br/>
+      </article>
+    </div>
+    <!-- https://codepen.io/flaviocopes/pen/zyyJpL -->
+    <div id="loading-screen" class="">
+      <img src="images/clan_symbols.png" class="rotate" />
+    </div>
+    
+  </body>
+</html>
