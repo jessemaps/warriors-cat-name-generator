@@ -54,7 +54,8 @@ function displayName() {
   
   //display waiting graphic
   var loader = document.getElementById("loading-screen");
-  loader.classList.toggle('show');
+  fadeIn(loader);
+  //loader.classList.toggle('show');
   
   //set timer for a few seconds
   //Get random wait time
@@ -68,8 +69,37 @@ function showResults() {
   
   //hide waiting graphic
   var loader = document.getElementById("loading-screen");
-  loader.classList.toggle('show');
+  fadeOut(loader);
+  //loader.classList.toggle('show');
   
   //Update the display with the name
   document.getElementById("nameLabel").innerHTML = name;
+}
+
+
+function fadeOut(element) {
+  var op = 1;  // initial opacity
+  var timer = setInterval(function () {
+    if (op <= 0.1){
+      clearInterval(timer);
+      element.style.display = 'none';
+    }
+    element.style.opacity = op;
+    element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+    op -= op * 0.1;
+  }, 5);
+}
+
+
+function fadeIn(element) {
+  var op = 0.1;  // initial opacity
+  element.style.display = 'flex';
+  var timer = setInterval(function () {
+    if (op >= 1){
+      clearInterval(timer);
+    }
+    element.style.opacity = op;
+    element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+    op += op * 0.1;
+  }, 5);
 }
